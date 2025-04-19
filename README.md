@@ -38,6 +38,49 @@ git clone git@github.com:quentinjeanningros/3_shader_experimental_boilerplate.gi
 npm install
 ```
 
+## 🔄 Creating a New Project from this Boilerplate
+
+1. Create a new repository on GitHub:
+
+   - Go to GitHub.com and click on the "+" button in the top right corner
+   - Select "New repository"
+   - Give your new repository a name
+   - Choose whether you want it to be public or private
+   - Do NOT initialize it with a README, .gitignore, or license
+
+2. Clone and set up the new project:
+
+```bash
+# Clone the original repository with a new directory name
+git clone git@github.com:quentinjeanningros/3_shader_experimental_boilerplate.git new-project-name
+
+# Go into the new directory
+cd new-project-name
+
+# Remove the existing git history
+rm -rf .git
+
+# Initialize a new git repository
+git init
+
+# Add the new remote repository
+git remote add origin git@github.com:yourusername/new-repository-name.git
+
+# Add all files
+git add .
+
+# Commit the files
+git commit -m "Initial commit"
+
+# Push to the new repository
+git push -u origin main
+```
+
+3. Update project-specific files:
+   - Modify `package.json` with new project name and details
+   - Update this README.md to reflect your project
+   - Make any other project-specific modifications
+
 ## 🏃‍♂️ Development
 
 Start the development server:
