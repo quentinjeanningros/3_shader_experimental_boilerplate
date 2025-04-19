@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# Three.js Shader Experimental Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based boilerplate for Three.js shader experiments, built with TypeScript and Vite. This project provides a solid foundation for creating interactive 3D graphics and shader experiments.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 integration with Three.js
+- TypeScript support for type safety
+- Vite for fast development and building
+- Motion library for smooth animations
+- Custom hooks for:
+  - Element size management
+  - Three.js scene setup
+  - Mouse interaction handling
+- Modern ESLint configuration
+- Prettier code formatting
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- Three.js
+- TypeScript
+- Vite
+- Motion (for animations)
+- ESLint + Prettier
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone [your-repo-url]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+## 🏃‍♂️ Development
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
+
+## 🔨 Build
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## 🧹 Linting
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+## 📁 Project Structure
+
+├── src/
+│ ├── hooks/ # Custom React hooks
+│ ├── three/ # Three.js related components and setup
+│ ├── style/ # CSS styles
+│ ├── types/ # TypeScript type definitions
+│ └── main.tsx # Application entry point
+├── public/ # Static assets
+└── index.html # HTML entry point
+
+## 🎮 Usage
+
+The boilerplate comes with a basic Three.js scene setup that includes:
+
+- Responsive canvas sizing
+- Mouse interaction handling
+- Spring-based animations
+- Scene management through custom hooks
+
+To start creating your shader experiments:
+
+1. Add your shaders in the `three` directory
+2. Modify the scene setup in `ThreeScene` component
+3. Utilize the provided hooks for interaction and animation
+
+## 🔧 Configuration
+
+- TypeScript configuration in `tsconfig.json`
+- Vite configuration in `vite.config.ts`
+- ESLint rules in `eslint.config.js`
+- Prettier settings in `.prettierrc`
+
+## 📄 License
+
+This project is licensed under the terms included in the LICENSE file.
