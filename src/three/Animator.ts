@@ -13,7 +13,6 @@ export class Animator {
   private mouse: THREE.Vector2 = new THREE.Vector2(0, 0);
   private plane: THREE.Mesh;
   private material: THREE.ShaderMaterial;
-  private baseSize: number = 0.2; // Base size for shader effects
 
   /**
    * Creates a new Animator instance
@@ -67,15 +66,6 @@ export class Animator {
    */
   public setMouse(x: number, y: number) {
     this.mouse.set(x, y);
-    this.scene.refresh();
-  }
-
-  /**
-   * Updates the size uniform in the shader
-   * @param multiplier - Size multiplier relative to base size
-   */
-  public setDotSize(multiplier: number) {
-    this.material.uniforms.uSize.value = this.baseSize * multiplier;
     this.scene.refresh();
   }
 
