@@ -72,6 +72,7 @@ npm run lint
 
 ## 📁 Project Structure
 
+```
 ├── src/
 │ ├── hooks/ # Custom React hooks
 │ ├── three/ # Three.js related components and setup
@@ -80,6 +81,7 @@ npm run lint
 │ └── main.tsx # Application entry point
 ├── public/ # Static assets
 └── index.html # HTML entry point
+```
 
 ## 🎮 Usage
 
